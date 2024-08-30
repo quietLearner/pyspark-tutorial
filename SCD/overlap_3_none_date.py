@@ -5,7 +5,6 @@ from datetime import datetime, date
 
 
 def find_intersections(list, lists):
-
     maxdate = datetime(datetime.max.year, 1, 1)
 
     # collect all points first into a set and the into a sorted sequence
@@ -14,7 +13,6 @@ def find_intersections(list, lists):
         breaks.update(*l)
     # sort None values to the end
     breaks = sorted(breaks, key=lambda x: (x or maxdate))
-
     # print("breaks", breaks)
 
     intersections = []
